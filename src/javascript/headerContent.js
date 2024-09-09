@@ -32,12 +32,12 @@ export function createHeader() {
     const btnDays = document.createElement("button");
     btnDays.id = "btn-days";
     btnDays.classList.add("nav-btn");
-    btnDays.textContent = "September 14th";
+    btnDays.textContent = "This Year";
 
     const btnYear = document.createElement("button");
     btnYear.id = "btn-year";
     btnYear.classList.add("nav-btn");
-    btnYear.textContent = "The Year: 1951";
+    btnYear.textContent = "Prior Years";
 
     headerContent.append(titleImg, title, timer, navBar);
 

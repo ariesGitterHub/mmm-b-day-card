@@ -11,7 +11,8 @@
 :root {
 
     --bkgd: #f4f1ee;
-    --contrast: #000000;  
+    --contrast: #000000; 
+    --accent1: #8995c7; 
  
 
     --font-fun: 'Luckiest Guy', cursive;
@@ -83,8 +84,19 @@ body {
     align-items: center;
     font-family: var(--font-plain);
     font-size: 1.25rem;
-    margin: 0 .5rem 0 .5rem;
+    margin: .5rem;
     padding: .5rem;
+}
+
+.nav-btn:hover {
+    background-color: var(--bkgd);
+    border: .25rem solid var(--contrast);
+    color: var(--contrast);
+    transform: scale(1.05);
+}
+
+.nav-btn:active {
+    transform: scale(.95);
 }
 
 #slideshow-container {
