@@ -125,11 +125,6 @@ updateCountdown();
 
 
 
-// script.js
-// index.js
-
-// index.js
-
 export function slideShow() {
   // Initial slide index
   let slideIndex = 0;
@@ -159,3 +154,4 @@ export function slideShow() {
   // Start the slideshow
   showSlides();
 }
+
