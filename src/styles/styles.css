@@ -13,7 +13,7 @@
     --bkgd: #f4f1ee;
     --contrast: #000000; 
     --accent1: #96a0ca; 
-    --accent2: #e5ce84; 
+    --accent2: #ded8c3; 
 
     --font-fun: 'Luckiest Guy', cursive;
     --font-fancy: "Cabin Sketch", sans-serif;
@@ -30,16 +30,17 @@
 
 body {
     width: 100vw;
-    background-color: var(--bkgd); 
+    background-color: var(--accent2); 
 
     }
 
 #header-content {
     background-color: var(--accent2);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
 }
 
 #title-img {
@@ -48,8 +49,13 @@ body {
 }
 
 #title {
+    display: flex;
+        justify-content: center;
+        align-items: center;
     font-family: var(--font-hand);
-    font-size: 2rem;
+    font-size: 1.5rem;
+    padding: 0 1rem 0 1rem;
+    text-align: center;
 
 }
 
@@ -57,11 +63,12 @@ body {
     height: 3rem;
     width: 100vw;
     display: flex;
-    justify-content: center;
-    align-items: center;
+        justify-content: center;
+        align-items: center;
     font-family: var(--font-plain);
-    font-size: 1.35rem;
-
+    font-size: 1rem;
+    padding: 0 1rem 0 1rem;
+    text-align: center;
 }
 
 #nav-bar {
@@ -74,7 +81,7 @@ body {
 }
 
 .nav-btn {
-    height: 3rem;
+    height: fit-content;
     width: fit-content;
     background-color: var(--contrast);
     border: .25rem solid var(--contrast);

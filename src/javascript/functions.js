@@ -110,6 +110,8 @@ export function updateCountdown() {
   const nextTargetDate = getNextTargetDate(now);
   const countdown = getCountdownToTargetDate(nextTargetDate);
 
+
+
 //   console.log(
 //     `Countdown to September 14: ${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, and ${countdown.seconds} seconds`
 //   );
@@ -119,6 +121,30 @@ export function updateCountdown() {
 
 // Initial call to display the countdown immediately
 updateCountdown();
+
+export function isDayOrDays() {
+  let dayOrDays = "";
+  if (updateCountdown().days === 1) {
+    dayOrDays = "day";
+  } else {
+    dayOrDays = "days";
+  }
+  console.log(updateCountdown().days, updateCountdown().hours);
+  
+  return dayOrDays;
+}
+
+
+export function isHourOrHours() {
+  let hourOrHours = "";
+  if (updateCountdown().hours === 1) {
+    hourOrHours = "hour";
+  } else {
+    hourOrHours = "hours";
+  }
+
+  return hourOrHours;
+}
 
 // Set up an interval to update the countdown every second
 // setInterval(updateCountdown, 1000);

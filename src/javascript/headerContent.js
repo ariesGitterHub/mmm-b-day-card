@@ -1,4 +1,4 @@
-import { age, formatAgeWithSuffix, updateCountdown } from "./functions.js";
+import { age, formatAgeWithSuffix, updateCountdown, isDayOrDays, isHourOrHours } from "./functions.js";
 import imgCake from "../assets/cake.svg";
 
 export function createHeader() {
@@ -6,7 +6,7 @@ export function createHeader() {
 
     const title = document.createElement("h1");
     title.id = "title";
-    title.textContent = `Happy ${formatAgeWithSuffix(age)} Birthday Mom!`
+    title.textContent = `Happy ${formatAgeWithSuffix(age)} Birthday, Mom!`
 
     const titleImg = document.createElement("img");
     titleImg.id = "title-img";
@@ -16,7 +16,9 @@ export function createHeader() {
     const timer = document.createElement("p");
     timer.id = "timer";
     timer.textContent = `(Your next birthday is in 
-    ${updateCountdown().days} days.)`
+    ${updateCountdown().days} ${isDayOrDays()}, ${
+      updateCountdown().hours
+    } ${isHourOrHours()}.)`;
     // , ${updateCountdown().hours} hours, 
     // ${updateCountdown().minutes} minutes, and 
     // ${updateCountdown().seconds} seconds`;
@@ -32,15 +34,17 @@ export function createHeader() {
     const btnDays = document.createElement("button");
     btnDays.id = "btn-days";
     btnDays.classList.add("nav-btn");
-    btnDays.textContent = "This Year";
+    btnDays.textContent = "Puzzle Links";
 
-    const btnYear = document.createElement("button");
-    btnYear.id = "btn-year";
-    btnYear.classList.add("nav-btn");
-    btnYear.textContent = "Prior Years";
+    // const btnYear = document.createElement("button");
+    // btnYear.id = "btn-year";
+    // btnYear.classList.add("nav-btn");
+    // btnYear.textContent = "Prior Years";
 
     headerContent.append(titleImg, title, timer, navBar);
 
-    navBar.append(btnHome, btnDays, btnYear);
+    navBar.append(btnHome, btnDays
+        // , btnYear
+    );
 }
 
