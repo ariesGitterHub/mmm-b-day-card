@@ -29,7 +29,7 @@ body {
 
     }
 
-#header-content {
+#header-content, #footer-content {
     background-color: var(--accent2);
     display: flex;
         flex-direction: column;
@@ -37,7 +37,7 @@ body {
         align-items: center;
 }
 
-#title-img {
+#title-img, #footer-img {
     height: 6rem;
     margin-top: .5rem;
 }
@@ -176,8 +176,6 @@ to { opacity: 1; }
 }
 
 
-
-
 #home-content {
     display: flex;
     /* flex-direction: column; */
@@ -190,6 +188,24 @@ to { opacity: 1; }
     flex-direction: column;
     justify-content: center;
     align-items: start;
+    padding: 1rem;
+}
+
+#puzzle-title {
+    display: flex;
+        justify-content: center;
+        align-items: center;
+    font-family: var(--font-fancy);
+    font-size: 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+a {
+    font-family: var(--font-plain);
+    font-size: 1.25rem;
+    padding: .25rem;
+
 }
 
 /* .hide {

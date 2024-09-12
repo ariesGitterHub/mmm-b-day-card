@@ -1,6 +1,8 @@
 import "./styles/styles.css";
 import { createHeader } from "./javascript/headerContent";
 import { createHome } from "./javascript/homeContent";
+import { createPuzzle } from "./javascript/puzzleContent";
+import { createFooter } from "./javascript/footerContent";
 import {
   slideShow,
   goHomeScreen,
@@ -10,6 +12,8 @@ import {
 document.addEventListener("DOMContentLoaded", () => {
 createHeader();
 createHome();
+createPuzzle();
+createFooter();
 slideShow();
 
 // const navBtns = document.querySelectorAll(".nav-btn");
