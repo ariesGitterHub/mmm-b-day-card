@@ -1,6 +1,7 @@
 //https://custom-connections-game.vercel.app/
 //https://custom-connections-game.vercel.app/FJYBQK0DPx5013PsLiwq
 //https://custom-connections-game.vercel.app/X4MWQyefjYpVlfuinW95
+//https://custom-connections-game.vercel.app/y8l8rAKL0IFv4oz3aJAI
 
 export function createPuzzle() {
   const puzzleContent = document.querySelector("#puzzle-content");
@@ -21,11 +22,17 @@ export function createPuzzle() {
   puzzle2.target = "_blank";
   puzzle2.textContent = "Puzzle 2";
 
+  const puzzle3 = document.createElement("a");
+  puzzle3.href =
+    "https://custom-connections-game.vercel.app/y8l8rAKL0IFv4oz3aJAI";
+  puzzle3.target = "_blank";
+  puzzle3.textContent = "Puzzle 3";
+
   const makeYourOwnPuzzle = document.createElement("a");
   makeYourOwnPuzzle.href = "https://custom-connections-game.vercel.app/";
   makeYourOwnPuzzle.target = "_blank";
   makeYourOwnPuzzle.textContent = "Make Your Own NYT Connections Puzzle!";
 
-  puzzleContent.append(puzzleTitle, puzzle1, puzzle2, makeYourOwnPuzzle);
+  puzzleContent.append(puzzleTitle, puzzle1, puzzle2, puzzle3, makeYourOwnPuzzle);
 }
 
