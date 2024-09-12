@@ -1,17 +1,24 @@
-import { age, formatAgeWithSuffix, updateCountdown, isDayOrDays, isHourOrHours } from "./functions.js";
+import { 
+    age, 
+    formatAgeWithSuffix, 
+    updateCountdown, 
+    isDayOrDays, 
+    isHourOrHours 
+} from "./functions.js";
 import imgCake from "../assets/cake.svg";
+import imgRabbit from "../assets/rabbit.svg";
 
 export function createHeader() {
     const headerContent = document.querySelector("#header-content");
-
-    const title = document.createElement("h1");
-    title.id = "title";
-    title.textContent = `Happy ${formatAgeWithSuffix(age)} Birthday, Mom!`
 
     const titleImg = document.createElement("img");
     titleImg.id = "title-img";
     titleImg.src = imgCake;
     titleImg.alt = "";
+
+    const title = document.createElement("h1");
+    title.id = "title";
+    title.textContent = `Happy ${formatAgeWithSuffix(age)} Birthday, Mom!`
 
     const timer = document.createElement("p");
     timer.id = "timer";
@@ -31,19 +38,26 @@ export function createHeader() {
     btnHome.classList.add("nav-btn");
     btnHome.textContent = "Home";
 
-    const btnDays = document.createElement("button");
-    btnDays.id = "btn-days";
-    btnDays.classList.add("nav-btn");
-    btnDays.textContent = "Puzzle Links";
+    const btnPuzzle = document.createElement("button");
+    btnPuzzle.id = "btn-puzzle";
+    btnPuzzle.classList.add("nav-btn");
+    btnPuzzle.textContent = "Puzzle Links";
 
     // const btnYear = document.createElement("button");
     // btnYear.id = "btn-year";
     // btnYear.classList.add("nav-btn");
     // btnYear.textContent = "Prior Years";
 
-    headerContent.append(titleImg, title, timer, navBar);
+    // const footerImg = document.createElement("img");
+    // footerImg.id = "footer-img";
+    // footerImg.src = imgRabbit;
+    // footerImg.alt = "";
 
-    navBar.append(btnHome, btnDays
+    headerContent.append(titleImg, title, timer, navBar, 
+        // footerImg
+    );
+
+    navBar.append(btnHome, btnPuzzle
         // , btnYear
     );
 }

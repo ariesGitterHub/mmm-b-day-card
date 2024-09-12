@@ -233,3 +233,49 @@ export function slideShow() {
   showSlides();
   setInterval(nextSlide, 5000); // Change slide every 5 seconds
 }
+
+
+// export function changeScreen() {
+//   const homeContent = document.querySelector("#home-content");
+//   const puzzleContent = document.querySelector("#puzzle-content");
+
+//   if (!homeContent.classList.contains("none")) {
+//     homeContent.style.toggle("none");
+//     puzzleContent.style.toggle("flex");
+//     console.log("home");
+    
+//   } else if (puzzleContent.classList.contains("flex")) {
+//     homeContent.style.toggle("none");
+//     puzzleContent.style.toggle("flex");
+//     console.log("puzzle");
+//   }
+// }
+
+export function goHomeScreen() {
+  const homeContent = document.querySelector("#home-content");
+  const puzzleContent = document.querySelector("#puzzle-content");
+
+
+    homeContent.style.display = "flex";
+    puzzleContent.style.display = "none";
+    console.log("Showing home content");
+
+}
+
+
+export function goPuzzleScreen() {
+  const homeContent = document.querySelector("#home-content");
+  const puzzleContent = document.querySelector("#puzzle-content");
+
+ 
+    homeContent.style.display = "none";
+    puzzleContent.style.display = "flex";
+    console.log("Showing puzzle links");
+  
+}
+
+// const btnHome = document.querySelector("#btn-home");
+// btnHome.addEventListener("click", goHomeScreen);
+
+// const btnPuzzle = document.querySelector("#btn-puzzle");
+// btnPuzzle.addEventListener("click", goPuzzleScreen);
