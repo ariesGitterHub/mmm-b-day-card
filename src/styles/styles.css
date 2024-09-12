@@ -12,8 +12,8 @@
 
     --bkgd: #f4f1ee;
     --contrast: #000000; 
-    --accent1: #8995c7; 
- 
+    --accent1: #96a0ca; 
+    --accent2: #e5ce84; 
 
     --font-fun: 'Luckiest Guy', cursive;
     --font-fancy: "Cabin Sketch", sans-serif;
@@ -35,6 +35,7 @@ body {
     }
 
 #header-content {
+    background-color: var(--accent2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -76,7 +77,7 @@ body {
     height: 3rem;
     width: fit-content;
     background-color: var(--contrast);
-    border: .25rem solid var(--border);
+    border: .25rem solid var(--contrast);
     border-radius: .75rem;
     color: var(--bkgd);
     display: flex;
@@ -89,7 +90,7 @@ body {
 }
 
 .nav-btn:hover {
-    background-color: var(--bkgd);
+    background-color: var(--accent1);
     border: .25rem solid var(--contrast);
     color: var(--contrast);
     transform: scale(1.05);
@@ -122,12 +123,53 @@ height: auto;
 }
 
 .fade {
-/* animation: fade 2s ease-in-out; */
+animation: fade 2s ease-in-out;
 }
 
 @keyframes fade {
 from { opacity: 0.4; }
 to { opacity: 1; }
+}
+
+#slide-btn-dot-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .25rem;
+}
+
+#btn-prev, #btn-next {
+    height: 3rem;
+    width: 3rem;
+    background-color: var(--bkgd);
+    border: .25rem solid var(--contrast);
+    border-radius: .75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-prev:hover, #btn-next:hover {
+    background-color: var(--accent1);
+    border: .25rem solid var(--contrast);
+    color: var(--contrast);
+    transform: scale(1.05);
+}
+
+#btn-prev:active, #btn-next:active {
+    transform: scale(.95);
+}
+
+#btn-prev-img, #btn-next-img {
+    height: 2rem;
+    width: auto;
+}
+
+.dot {
+    height: 1.5rem;
+    width: 1.5rem;
+    border: .25rem solid var(--contrast);
+    border-radius: 50%;
 }
 
 #home-content {

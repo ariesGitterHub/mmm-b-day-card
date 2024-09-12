@@ -125,33 +125,85 @@ updateCountdown();
 
 
 
+// export function slideShow() {
+//   // Initial slide index
+//   let slideIndex = 0;
+//   // let dotIndex = 0;
+
+//   // Function to show slides
+//   function showSlides() {
+//     const slides = document.getElementsByClassName("slide");
+//     const dots = document.getElementsByClassName("dot");
+
+//     // Hide all slides
+//     for (let i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";
+//       dots[i].style.backgroundColor = "transparent";
+//     }
+
+//     // Increment slide index
+//     slideIndex++;
+//     if (slideIndex > slides.length) {
+//       slideIndex = 1; // Loop back to the first slide
+//       // dotIndex = 1;
+//     }
+
+//     // Display the current slide
+//     slides[slideIndex - 1].style.display = "block";
+//     dots[slideIndex -1].style.backgroundColor = "var(--accent1)";
+    
+
+//     // Change slide every 5 seconds
+//     setTimeout(showSlides, 5000);
+//   }
+
+//   // Start the slideshow
+//   showSlides();
+// }
+
 export function slideShow() {
   // Initial slide index
-  let slideIndex = 0;
+  let slideIndex = 1;
 
   // Function to show slides
   function showSlides() {
     const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
 
-    // Hide all slides
+    // Hide all slides and reset all dots
     for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
+      dots[i].style.backgroundColor = "transparent";
     }
 
-    // Increment slide index
-    slideIndex++;
-    if (slideIndex > slides.length) {
-      slideIndex = 1; // Loop back to the first slide
-    }
-
-    // Display the current slide
+    // Display the current slide and highlight the corresponding dot
     slides[slideIndex - 1].style.display = "block";
-
-    // Change slide every 10 seconds
-    setTimeout(showSlides, 10000);
+    dots[slideIndex - 1].style.backgroundColor = "var(--accent1)";
   }
 
-  // Start the slideshow
-  showSlides();
-}
+  // Function to show the next slide
+  function nextSlide() {
+    slideIndex++;
+    if (slideIndex > document.getElementsByClassName("slide").length) {
+      slideIndex = 1; // Loop back to the first slide
+    }
+    showSlides();
+  }
 
+  // Function to show the previous slide
+  function prevSlide() {
+    slideIndex--;
+    if (slideIndex < 1) {
+      slideIndex = document.getElementsByClassName("slide").length; // Loop to the last slide
+    }
+    showSlides();
+  }
+
+  // Attach event listeners to buttons
+  document.getElementById("btn-next").addEventListener("click", nextSlide);
+  document.getElementById("btn-prev").addEventListener("click", prevSlide);
+
+  // Start the slideshow and automatic slide change
+  showSlides();
+  setInterval(nextSlide, 5000); // Change slide every 5 seconds
+}

@@ -1,7 +1,0 @@
-# This is the configuration file for Netlify
-[build]
-  command = "npm run build"  # Command to run your build script
-  publish = "dist"           # Directory to publish after building
-
-# Optional: You can also specify a base directory
-# base = "path/to/base"      # Set this if your project is in a subdirectory
