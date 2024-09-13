@@ -147,7 +147,7 @@ export function slideShow() {
 
     // Display the current slide and highlight the corresponding dot
     slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].style.backgroundColor = "var(--accent1)";
+    dots[slideIndex - 1].style.backgroundColor = "var(--contrast)";
   }
 
   // Function to show the next slide
@@ -185,7 +185,7 @@ export function goHomeScreen() {
   homeContent.style.display = "flex";
   puzzleContent.style.display = "none";
   titleImg.src = imgCake;
-  console.log("Showing home content");
+  // console.log("Showing home content");
 }
 
 export function goPuzzleScreen() {
@@ -196,7 +196,7 @@ export function goPuzzleScreen() {
   homeContent.style.display = "none";
   puzzleContent.style.display = "flex";
   titleImg.src = imgRabbit;
-  console.log("Showing puzzle links");
+  // console.log("Showing puzzle links");
 }
 
 
