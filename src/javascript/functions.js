@@ -13,7 +13,7 @@ const birthday = new Date("1951-09-14");
 const today = new Date();
 export const age = differenceInYears(today, birthday);
 
-console.log(`Age: ${age}`);
+// console.log(`Age: ${age}`);
 
 export function calculateExactAge(birthday, currentDate = new Date()) {
   // Ensure both dates are at the start of the day to avoid time issues
@@ -37,17 +37,9 @@ export function calculateExactAge(birthday, currentDate = new Date()) {
 const currentDate = new Date(); // or any other date
 const exactAge = calculateExactAge(birthday, currentDate);
 
-console.log(
-  `Age: ${exactAge.years} years, ${exactAge.months} months, and ${exactAge.days} days`
-);
-
-// export function exactAge() {
-
-//   const exactCurrentAge = document.createElement("p");
-//   exactCurrentAge.id = "exact-current-age";
-//   exactCurrentAge.textContent = `You are exactly: ${age.years} years, ${age.months} months, and ${age.days} days young. `;
-
-// }
+// console.log(
+//   `Age: ${exactAge.years} years, ${exactAge.months} months, and ${exactAge.days} days`
+// );
 
 function getOrdinalSuffix(number) {
   const lastDigit = number % 10;
@@ -75,11 +67,7 @@ export function formatAgeWithSuffix(age) {
 }
 
 // Example usage
-
-console.log(`Age: ${formatAgeWithSuffix(age)}`); // Output: Age: 72nd
-
-
-
+// console.log(`Age: ${formatAgeWithSuffix(age)}`); // Output: Age: 72nd
 
 import { differenceInSeconds, addYears } from "date-fns";
 
@@ -113,12 +101,6 @@ export function updateCountdown() {
   const nextTargetDate = getNextTargetDate(now);
   const countdown = getCountdownToTargetDate(nextTargetDate);
 
-
-
-//   console.log(
-//     `Countdown to September 14: ${countdown.days} days, ${countdown.hours} hours, ${countdown.minutes} minutes, and ${countdown.seconds} seconds`
-//   );
-
   return countdown
 }
 
@@ -132,11 +114,10 @@ export function isDayOrDays() {
   } else {
     dayOrDays = "days";
   }
-  console.log(updateCountdown().days, updateCountdown().hours);
+  // console.log(updateCountdown().days, updateCountdown().hours);
   
   return dayOrDays;
 }
-
 
 export function isHourOrHours() {
   let hourOrHours = "";
@@ -148,47 +129,6 @@ export function isHourOrHours() {
 
   return hourOrHours;
 }
-
-// Set up an interval to update the countdown every second
-// setInterval(updateCountdown, 1000);
-
-
-
-// export function slideShow() {
-//   // Initial slide index
-//   let slideIndex = 0;
-//   // let dotIndex = 0;
-
-//   // Function to show slides
-//   function showSlides() {
-//     const slides = document.getElementsByClassName("slide");
-//     const dots = document.getElementsByClassName("dot");
-
-//     // Hide all slides
-//     for (let i = 0; i < slides.length; i++) {
-//       slides[i].style.display = "none";
-//       dots[i].style.backgroundColor = "transparent";
-//     }
-
-//     // Increment slide index
-//     slideIndex++;
-//     if (slideIndex > slides.length) {
-//       slideIndex = 1; // Loop back to the first slide
-//       // dotIndex = 1;
-//     }
-
-//     // Display the current slide
-//     slides[slideIndex - 1].style.display = "block";
-//     dots[slideIndex -1].style.backgroundColor = "var(--accent1)";
-    
-
-//     // Change slide every 5 seconds
-//     setTimeout(showSlides, 5000);
-//   }
-
-//   // Start the slideshow
-//   showSlides();
-// }
 
 export function slideShow() {
   // Initial slide index
@@ -237,51 +177,26 @@ export function slideShow() {
   setInterval(nextSlide, 5000); // Change slide every 5 seconds
 }
 
-
-// export function changeScreen() {
-//   const homeContent = document.querySelector("#home-content");
-//   const puzzleContent = document.querySelector("#puzzle-content");
-
-//   if (!homeContent.classList.contains("none")) {
-//     homeContent.style.toggle("none");
-//     puzzleContent.style.toggle("flex");
-//     console.log("home");
-    
-//   } else if (puzzleContent.classList.contains("flex")) {
-//     homeContent.style.toggle("none");
-//     puzzleContent.style.toggle("flex");
-//     console.log("puzzle");
-//   }
-// }
-
 export function goHomeScreen() {
   const homeContent = document.querySelector("#home-content");
   const puzzleContent = document.querySelector("#puzzle-content");
   const titleImg = document.querySelector("#title-img");
 
-
-    homeContent.style.display = "flex";
-    puzzleContent.style.display = "none";
-    titleImg.src = imgCake;
-    console.log("Showing home content");
-
+  homeContent.style.display = "flex";
+  puzzleContent.style.display = "none";
+  titleImg.src = imgCake;
+  console.log("Showing home content");
 }
-
 
 export function goPuzzleScreen() {
   const homeContent = document.querySelector("#home-content");
   const puzzleContent = document.querySelector("#puzzle-content");
   const titleImg = document.querySelector("#title-img");
  
-    homeContent.style.display = "none";
-    puzzleContent.style.display = "flex";
-    titleImg.src = imgRabbit;
-    console.log("Showing puzzle links");
-  
+  homeContent.style.display = "none";
+  puzzleContent.style.display = "flex";
+  titleImg.src = imgRabbit;
+  console.log("Showing puzzle links");
 }
 
-// const btnHome = document.querySelector("#btn-home");
-// btnHome.addEventListener("click", goHomeScreen);
 
-// const btnPuzzle = document.querySelector("#btn-puzzle");
-// btnPuzzle.addEventListener("click", goPuzzleScreen);
