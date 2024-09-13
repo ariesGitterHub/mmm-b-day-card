@@ -1,12 +1,10 @@
-import imgRabbit from "../assets/rabbit.svg";
 
 export function createFooter() {
   const footerContent = document.querySelector("#footer-content");
 
-  const footerImg = document.createElement("img");
-  footerImg.id = "footer-img";
-  footerImg.src = imgRabbit;
-  footerImg.alt = "";
+  const footerText = document.createElement("p");
+  footerText.id = "footer-text";
+  footerText.textContent = "A Mad Muffin Man Design Studio Production Copyright 2024";
 
-  footerContent.append(footerImg);
+  footerContent.append(footerText);
 }

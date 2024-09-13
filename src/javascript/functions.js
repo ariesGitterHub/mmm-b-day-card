@@ -6,6 +6,9 @@ import {
   startOfDay,
 } from "date-fns";
 
+import imgCake from "../assets/cake.svg";
+import imgRabbit from "../assets/rabbit.svg";
+
 const birthday = new Date("1951-09-14");
 const today = new Date();
 export const age = differenceInYears(today, birthday);
@@ -254,10 +257,12 @@ export function slideShow() {
 export function goHomeScreen() {
   const homeContent = document.querySelector("#home-content");
   const puzzleContent = document.querySelector("#puzzle-content");
+  const titleImg = document.querySelector("#title-img");
 
 
     homeContent.style.display = "flex";
     puzzleContent.style.display = "none";
+    titleImg.src = imgCake;
     console.log("Showing home content");
 
 }
@@ -266,10 +271,11 @@ export function goHomeScreen() {
 export function goPuzzleScreen() {
   const homeContent = document.querySelector("#home-content");
   const puzzleContent = document.querySelector("#puzzle-content");
-
+  const titleImg = document.querySelector("#title-img");
  
     homeContent.style.display = "none";
     puzzleContent.style.display = "flex";
+    titleImg.src = imgRabbit;
     console.log("Showing puzzle links");
   
 }
