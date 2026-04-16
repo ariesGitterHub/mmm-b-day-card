@@ -16,9 +16,6 @@ createPuzzle();
 createFooter();
 slideShow();
 
-// const navBtns = document.querySelectorAll(".nav-btn");
-// navBtns.forEach((btn) => btn.addEventListener("click", changeScreen))
-
 const btnHome = document.querySelector("#btn-home");
 btnHome.addEventListener("click", goHomeScreen);
 
